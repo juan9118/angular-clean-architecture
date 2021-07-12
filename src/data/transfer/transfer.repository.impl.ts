@@ -1,5 +1,6 @@
 import { ID } from '../../app/core/definitions/id';
-import { Transaction, TRANSACTION_TYPES } from '../../app/core/entities/transaction';
+import { TRANSACTION_TYPES } from '../../app/core/definitions/transaction-type';
+import { Transaction } from '../../app/core/entities/transaction';
 import { User } from '../../app/core/entities/user';
 import { TransferRepository } from '../../app/transfer/transfer.repository';
 import { Database } from '../db';

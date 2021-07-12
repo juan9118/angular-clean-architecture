@@ -40,9 +40,11 @@ export class TransferInteractor implements Interactor {
     }
 
     try {
+      // let output: TransferOutput;
       const transactionId = await this.transfer(from, to, request.value);
+      // output.transactionId = transactionId;
 
-      return Promise.resolve({ transactionId });
+      return Promise.resolve({transactionId});
     } catch (error) {
       throw this.errorFactory.getError(ErrorType.transfer, request);
     }

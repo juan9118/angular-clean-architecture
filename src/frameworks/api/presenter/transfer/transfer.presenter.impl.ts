@@ -4,6 +4,7 @@ import { TransferPresenter, TransferPresenterOutput } from './transfer.presenter
 
 export class TransferPresenterImpl implements TransferPresenter {
   present(data: TransferOutput): Promise<TransferPresenterOutput> {
-    return Promise.resolve({ id: data.transactionId });
+    const transferPresenterOutput: TransferPresenterOutput = { id: data.transactionId };
+    return Promise.resolve(transferPresenterOutput);
   }
 }

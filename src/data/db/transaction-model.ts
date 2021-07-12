@@ -1,6 +1,7 @@
 import { ID } from '../../app/core/definitions/id';
 import { Model } from '../../app/core/definitions/model';
-import { Transaction, TRANSACTION_TYPES } from '../../app/core/entities/transaction';
+import { TRANSACTION_TYPES } from '../../app/core/definitions/transaction-type';
+import { Transaction } from '../../app/core/entities/transaction';
 
 import { UserModel } from './user-model';
 

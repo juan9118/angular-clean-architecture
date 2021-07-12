@@ -1,5 +1,6 @@
 import { Interactor } from '../core/definitions/interactor';
-import { Transaction, TRANSACTION_TYPES } from '../core/entities/transaction';
+import { TRANSACTION_TYPES } from '../core/definitions/transaction-type';
+import { Transaction } from '../core/entities/transaction';
 import { ApplicationErrorFactory } from '../core/definitions/application-error-factory';
 
 import { DepositInput } from './deposit.in';

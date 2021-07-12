@@ -22,7 +22,7 @@ const zero: SignupInput = {
   firstname: 'Zero',
   lastname: 'Maverick Hunter S',
   email: 'zero@mega.com',
-  username: 'megamanx',
+  username: 'zerox',
   password: 'passwd',
 };
 
@@ -37,7 +37,11 @@ const createUser = async (usr: SignupInput): Promise<ID> => {
   return output.id;
 };
 
-const makeDeposit = async (userId: ID, username: string, deposit: DepositInput): Promise<void> => {
+const makeDeposit = async (
+  userId: ID,
+  username: string,
+  deposit: DepositInput,
+): Promise<void> => {
   const presenter: DepositPresenter = app.container.resolve<DepositPresenter>('depositPresenter');
 
   const response = await app.main.deposit(deposit);
@@ -78,7 +82,16 @@ const makeTransfer = async (
     const zeroTransfer: TransferInput = { from: zeroId, to: megamanId, value: 200 };
 
     await makeTransfer(megamanId, zeroId, zero.username, megaman.username, zeroTransfer);
+
+
+
+
+
+
+
+
+
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 })();
